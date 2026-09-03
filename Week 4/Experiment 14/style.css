@@ -1,0 +1,30 @@
+body {
+background-color: #f0f0f0;
+font-family: Arial, sans-serif;
+margin: 20px;
+}
+
+h1 {
+color: darkblue;
+text-align: center;
+}
+
+h2 {
+color: darkgreen;
+}
+
+p {
+font-size: 16px;
+color: #333;
+}
+
+.box {
+background-color: white;
+padding: 15px;
+border: 1px solid gray;
+}
+
+footer {
+text-align: center;
+color: gray;
+}

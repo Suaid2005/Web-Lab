@@ -1,0 +1,15 @@
+p {
+color: green;
+font-size: 16px;
+}
+
+.heading {
+color: blue;
+text-align: center;
+}
+
+#special {
+color: red;
+background-color: lightyellow;
+padding: 10px;
+}
