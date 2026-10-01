@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Responsive Webpage</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+header {
+    background: purple;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background: #33b5e5;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+.facts {
+    background: beige;
+    padding: 20px;
+}
+
+footer {
+    background: #0099cc;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 5px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Chania</h1>
+</header>
+
+<nav>
+    <a href="#">Flight</a>
+    <a href="#">City</a>
+    <a href="#">Island</a>
+    <a href="#">Food</a>
+</nav>
+
+<main>
+    <h2>The City</h2>
+    <p>Chania is a city on the island of Crete.</p>
+    <p>It has an old town and a modern city.</p>
+</main>
+
+<div class="facts">
+    <h3>Facts</h3>
+    <ul>
+        <li>Chania is in Crete.</li>
+        <li>Crete is a Greek island.</li>
+    </ul>
+</div>
+
+<footer>
+    Resize the browser to see the responsive effect.
+</footer>
+
+</body>
+</html>

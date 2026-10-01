@@ -1,0 +1,37 @@
+.container {
+  width: 600px;
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1{
+	text-align: center;
+	color: darkblue;
+}
+
+.box {
+  width: 150px;
+  height: 60px;
+  padding: 20px;
+  box-sizing: border-box;
+  color: white;
+  background-color: red;
+  text-align: center;
+}
+
+/* Level 1 */
+.box1 {
+  position: static;
+}
+
+.box2 {
+  position: relative;
+  top: 100px;
+}
+
+.box3 {
+  position: relative;
+  top: 200px;
+}

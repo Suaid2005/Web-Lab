@@ -1,0 +1,16 @@
+.column {
+    width: 28%;
+
+    margin: 1%;
+    padding: 20px;
+
+    float: left;
+
+    background-color: lightblue;
+
+    text-align: center;
+}
+
+.clear {
+    clear: both;
+}

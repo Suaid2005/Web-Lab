@@ -1,0 +1,15 @@
+Week 6
+
+Positioning
+Level 1: Use static and relative positioning.
+Level 2: Design layout using absolute and fixed positioning.
+
+Floating & Layout
+Level 1: Apply Float properties.
+Level 2: Create a multi-column layout using float.
+
+Week 7
+
+Responsive Web Design
+Level 1: Use media queries.
+Level 2: Design a responsive webpage. 
