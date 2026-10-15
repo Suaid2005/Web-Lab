@@ -1,0 +1,13 @@
+CSS Frameworks
+Level 1: Use a CSS framework (Bootstrap basics).
+Level 2: Design responsive webpage using Bootstrap.
+
+Week 8
+
+XML Structure.
+Level 1: Create a simple XML document
+Level 2: Display XML data in webpage.
+
+XML Applications.
+Level 1: Validate XML structure.
+Level 2: Use XML for data representation in web pages.
