@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE studentInfo [
+    <!ELEMENT studentInfo (student+)>
+    <!ELEMENT student (name, roll, department)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT roll (#PCDATA)>
+    <!ELEMENT department (#PCDATA)>
+]>
+<studentInfo>
+    <student>
+        <name>Rahul Sharma</name>
+        <roll>101</roll>
+        <department>Computer Science</department>
+    </student>
+
+    <student>
+        <name>Ananya Rao</name>
+        <roll>102</roll>
+        <department>Electronics</department>
+    </student>
+</studentInfo>
