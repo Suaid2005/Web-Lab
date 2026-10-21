@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Student Details</h2>
+  <p id="result"></p>
+
+  <script>
+    let xml = `<student>
+      <name>Suaid</name>
+      <course>CSE</course>
+    </student>`;
+
+    let parser = new DOMParser();
+    let doc = parser.parseFromString(xml, "text/xml");
+
+    let name = doc.getElementsByTagName("name")[0].textContent;
+    let course = doc.getElementsByTagName("course")[0].textContent;
+
+    document.getElementById("result").innerHTML =
+      "Name: " + name + "<br>Course: " + course;
+  </script>
+</body>
+</html>

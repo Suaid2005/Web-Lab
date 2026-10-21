@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Student Records</h2>
+  <table border="1" cellpadding="8">
+    <tr><th>Name</th><th>Course</th></tr>
+    <tbody id="data"></tbody>
+  </table>
+
+  <script>
+    let xml = `<students>
+      <student><name>Suaid</name><course>CSE - DevOps</course></student>
+      <student><name>Abid Ali</name><course>CSE - AI/ML</course></student>
+    </students>`;
+
+    let doc = new DOMParser().parseFromString(xml, "text/xml");
+    let students = doc.getElementsByTagName("student");
+    let output = "";
+
+    for (let s of students) {
+      output += "<tr><td>" +
+        s.getElementsByTagName("name")[0].textContent +
+        "</td><td>" +
+        s.getElementsByTagName("course")[0].textContent +
+        "</td></tr>";
+    }
+
+    document.getElementById("data").innerHTML = output;
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>XML Validation</h2>
+  <p id="result"></p>
+
+  <script>
+    let xml = `<student>
+      <name>Suaid</name>
+      <course>CSE</course>
+    </student>`;
+
+    let doc = new DOMParser().parseFromString(xml, "text/xml");
+
+    if (doc.getElementsByTagName("parsererror").length > 0) {
+      document.getElementById("result").textContent =
+        "Invalid XML";
+    } else {
+      document.getElementById("result").textContent =
+        "Valid XML structure";
+    }
+  </script>
+</body>
+</html>
