@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Objects and Methods</title>
+</head>
+<body>
+<h2>Student Details</h2>
+<p id="output"></p>
+<script>
+let student = {
+name: "Rahul",
+age: 20,
+department: "CSE",
+display: function() {
+return "Name: " + this.name + "<br>" +
+"Age: " + this.age + "<br>" +
+"Department: " + this.department;
+}
+};
+document.getElementById("output").innerHTML =
+student.display();
+</script>
+</body>
+</html>

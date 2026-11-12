@@ -1,0 +1,19 @@
+Week 11
+
+Event Handling
+Level 1: Handle Click events.
+Level 2: Create interactive webpage using events.
+
+Form Validation
+Level 1: Validate input fields using Javascript.
+Level 2: Create complete form validation system.
+
+Week 12
+
+Objects & Methods
+Level 1: Create Javascript objects. 
+Level 2: Use methods and object properties.
+
+Pop-ups
+Level 1: Implement alert and prompt.
+Level 2: Create dynamic pop-up-based interaction.

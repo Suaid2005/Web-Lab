@@ -1,0 +1,651 @@
+# Web Technology Lab – Week 11 & Week 12
+
+Complete practical guide with simple programs, expected outputs, and record-writing format.
+
+I'll give you each experiment separately, divided into Level 1 and Level 2. The programs use basic HTML, CSS, and JavaScript, so you can directly copy them into VS Code or any text editor and run them in a browser.
+
+## How to perform the experiments
+
+For every experiment:
+
+1. Open VS Code or Notepad.
+2. Create an HTML file, for example `event1.html`.
+3. Copy the respective program.
+4. Save the file.
+5. Open it in Chrome or another browser.
+6. Perform the given operations and observe the output.
+
+# WEEK 11
+
+## Experiment 1: Event Handling
+
+Aim: To implement JavaScript event handling in a webpage.
+
+### Level 1: Handle Click Events
+
+Concept: The `onclick` event executes a JavaScript function when a user clicks a button.
+
+Program: `event_level1.html`
+
+HTMLWrap linesCopy codePreview
+
+```html
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Click Event</title>
+</head>
+<body>
+
+<h2>JavaScript Click Event</h2>
+
+<button onclick="showMessage()">Click Me</button>
+
+<p id="result"></p>
+
+<script>
+function showMessage() {
+    document.getElementById("result").innerHTML =
+        "Button clicked successfully!";
+}
+</script>
+
+</body>
+</html>
+```
+
+Expected Output:
+
+Before clicking:
+
+JavaScript Click Event
+
+Click Me
+
+No message displayed yet.
+
+After clicking:
+
+JavaScript Click Event
+
+Click Me
+
+Button clicked successfully\!
+
+What to write in record:
+
+- Aim
+- Program
+- Output (before and after clicking)
+- Result: Thus, the click event was successfully implemented using JavaScript.
+
+### Level 2: Create Interactive Webpage Using Events
+
+Concept: Use multiple events such as `onclick`, `onmouseover`, and `onmouseout` to make a webpage interactive.
+
+Program: `event_level2.html`
+
+HTMLWrap linesCopy codePreview
+
+```html
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Webpage</title>
+</head>
+<body>
+
+<h2>Interactive Webpage</h2>
+
+<button onclick="changeText()">
+    Click Here
+</button>
+
+<h3 id="message">Welcome!</h3>
+
+<p onmouseover="this.style.color='red'"
+   onmouseout="this.style.color='black'">
+   Move your mouse over this text.
+</p>
+
+<script>
+function changeText() {
+    document.getElementById("message").innerHTML =
+        "Hello! Welcome to JavaScript Events.";
+}
+</script>
+
+</body>
+</html>
+```
+
+Expected Output:
+
+- Initially, the heading displays `Welcome!`.
+- Clicking the button changes the heading to `Hello! Welcome to JavaScript Events.`
+- Moving the mouse over the paragraph changes its color to red.
+- Moving the mouse away changes its color back to black.
+
+What to write in record:
+
+- Aim
+- Program
+- Output (show all three event behaviors)
+- Result: Thus, an interactive webpage was created successfully using JavaScript events.
+
+## Experiment 2: Form Validation
+
+Aim: To validate user input fields using JavaScript.
+
+### Level 1: Validate Input Fields Using JavaScript
+
+Concept: Check whether the name and email fields are empty before accepting user input.
+
+Program: `form_level1.html`
+
+HTMLWrap linesCopy codePreview
+
+```html
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Form Validation</title>
+</head>
+<body>
+
+<h2>Student Registration</h2>
+
+<form onsubmit="return validateForm()">
+
+    Name:
+    <input type="text" id="name">
+    <br><br>
+
+    Email:
+    <input type="text" id="email">
+    <br><br>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<p id="result"></p>
+
+<script>
+function validateForm() {
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+
+    if (name == "" || email == "") {
+        document.getElementById("result").innerHTML =
+            "Please fill all fields.";
+        return false;
+    }
+
+    document.getElementById("result").innerHTML =
+        "Form submitted successfully!";
+
+    return false;
+}
+</script>
+
+</body>
+</html>
+```
+
+Expected Output:
+
+- If both fields are empty: `Please fill all fields.`
+- If both fields are filled: `Form submitted successfully!`
+
+What to write in record:
+
+- Aim
+- Program
+- Output for empty fields
+- Output for filled fields
+- Result: Thus, basic form validation was implemented successfully using JavaScript.
+
+### Level 2: Create Complete Form Validation System
+
+Concept: Validate name, email, password, and phone number using JavaScript conditions and regular expressions.
+
+Program: `form_level2.html`
+
+HTMLWrap linesCopy codePreview
+
+```html
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Complete Form Validation</title>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form onsubmit="return validate()">
+
+    Name:
+    <input type="text" id="name">
+    <br><br>
+
+    Email:
+    <input type="text" id="email">
+    <br><br>
+
+    Password:
+    <input type="password" id="password">
+    <br><br>
+
+    Phone:
+    <input type="text" id="phone">
+    <br><br>
+
+    <button type="submit">Register</button>
+
+</form>
+
+<p id="result"></p>
+
+<script>
+function validate() {
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let phone = document.getElementById("phone").value;
+
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let phonePattern = /^[0-9]{10}$/;
+
+    if (name.trim() == "") {
+        result.innerHTML = "Enter your name";
+    }
+    else if (!emailPattern.test(email)) {
+        result.innerHTML = "Enter a valid email";
+    }
+    else if (password.length < 6) {
+        result.innerHTML = "Password must contain 6 characters";
+    }
+    else if (!phonePattern.test(phone)) {
+        result.innerHTML = "Enter a valid 10-digit phone number";
+    }
+    else {
+        result.innerHTML = "Registration Successful!";
+    }
+
+    return false;
+}
+</script>
+
+</body>
+</html>
+```
+
+Expected Output:
+
+| Input condition | Expected message |
+| --- | --- |
+| Empty name | Enter your name |
+| Invalid email | Enter a valid email |
+| Password shorter than 6 characters | Password must contain 6 characters |
+| Phone not containing 10 digits | Enter a valid 10-digit phone number |
+| All fields valid | Registration Successful\! |
+
+Example valid input:
+
+- Name: Rahul
+- Email: rahul@gmail.com
+- Password: rahul123
+- Phone: 9876543210
+
+Registration Successful\!
+
+Expected success output
+
+What to write in record:
+
+- Aim
+- Program
+- Output for invalid inputs (at least two cases)
+- Output for valid inputs
+- Result: Thus, a complete form validation system was implemented successfully using JavaScript.
+
+# WEEK 12
+
+## Experiment 3: Objects & Methods
+
+Aim: To create JavaScript objects and access their properties and methods.
+
+### Level 1: Create JavaScript Objects
+
+Concept: An object stores data in key-value pairs called properties.
+
+Program: `object_level1.html`
+
+HTMLWrap linesCopy codePreview
+
+```html
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Objects</title>
+</head>
+<body>
+
+<h2>Student Object</h2>
+
+<p id="output"></p>
+
+<script>
+let student = {
+    name: "Rahul",
+    age: 20,
+    department: "CSE",
+    college: "ABC College"
+};
+
+document.getElementById("output").innerHTML =
+    "Name: " + student.name + "<br>" +
+    "Age: " + student.age + "<br>" +
+    "Department: " + student.department + "<br>" +
+    "College: " + student.college;
+
+</script>
+
+</body>
+</html>
+```
+
+Expected Output:
+
+Student Object
+
+- Name: Rahul
+- Age: 20
+- Department: CSE
+- College: ABC College
+
+What to write in record:
+
+- Aim
+- Program
+- Output
+- Result: Thus, a JavaScript object was created and its properties were accessed successfully.
+
+### Level 2: Use Methods and Object Properties
+
+Concept: An object method is a function defined inside an object. It can access object properties using `this`.
+
+Program: `object_level2.html`
+
+HTMLWrap linesCopy codePreview
+
+```html
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Objects and Methods</title>
+</head>
+<body>
+
+<h2>Student Details</h2>
+
+<p id="output"></p>
+
+<script>
+let student = {
+
+    name: "Rahul",
+    age: 20,
+    department: "CSE",
+
+    display: function() {
+        return "Name: " + this.name + "<br>" +
+               "Age: " + this.age + "<br>" +
+               "Department: " + this.department;
+    }
+};
+
+document.getElementById("output").innerHTML =
+    student.display();
+
+</script>
+
+</body>
+</html>
+```
+
+Expected Output:
+
+Student Details
+
+- Name: Rahul
+- Age: 20
+- Department: CSE
+
+What to write in record:
+
+- Aim
+- Program
+- Output
+- Result: Thus, JavaScript object properties and methods were implemented successfully.
+
+## Experiment 4: Pop-ups
+
+Aim: To implement JavaScript pop-up boxes using alert, prompt, and dynamic interaction.
+
+### Level 1: Implement Alert and Prompt
+
+Concept:
+
+- `alert()` displays a message.
+- `prompt()` accepts input from the user.
+
+Program: `popup_level1.html`
+
+HTMLWrap linesCopy codePreview
+
+```html
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alert and Prompt</title>
+</head>
+<body>
+
+<h2>JavaScript Pop-ups</h2>
+
+<script>
+
+alert("Welcome to JavaScript!");
+
+let name = prompt("Enter your name:");
+
+alert("Hello " + name + "!");
+
+</script>
+
+</body>
+</html>
+```
+
+Expected Output:
+
+1. First pop-up:
+
+This page says
+
+Welcome to JavaScript\!
+
+OK
+
+2. Second pop-up:
+
+This page says
+
+Enter your name:
+
+Rahul
+
+CancelOK
+
+3. Final pop-up:
+
+This page says
+
+Hello Rahul\!
+
+OK
+
+What to write in record:
+
+- Aim
+- Program
+- Output (three pop-up stages)
+- Result: Thus, alert and prompt pop-up boxes were implemented successfully.
+
+### Level 2: Create Dynamic Pop-up-Based Interaction
+
+Concept: Use `confirm()`, `prompt()`, and `alert()` to create an interactive program based on user responses.
+
+Program: `popup_level2.html`
+
+HTMLWrap linesCopy codePreview
+
+```html
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Pop-up Interaction</title>
+</head>
+<body>
+
+<h2>Interactive Pop-up System</h2>
+
+<button onclick="start()">Start Interaction</button>
+
+<p id="result"></p>
+
+<script>
+
+function start() {
+
+    let choice = confirm("Do you want to continue?");
+
+    if (choice) {
+
+        let name = prompt("Enter your name:");
+
+        if (name == null || name.trim() == "") {
+            alert("Name not entered!");
+            document.getElementById("result").innerHTML =
+                "Interaction cancelled.";
+        }
+        else {
+            alert("Welcome " + name + "!");
+            document.getElementById("result").innerHTML =
+                "Welcome, " + name + "! Have a nice day.";
+        }
+
+    }
+    else {
+
+        alert("You cancelled the interaction.");
+
+        document.getElementById("result").innerHTML =
+            "Interaction cancelled.";
+
+    }
+}
+
+</script>
+
+</body>
+</html>
+```
+
+Expected Output:
+
+When the user clicks Start Interaction:
+
+Case 1: User clicks OK
+
+1. Confirm box appears: `Do you want to continue?`
+2. Prompt box appears: `Enter your name:`
+3. User enters Rahul.
+4. Alert appears: `Welcome Rahul!`
+5. Webpage displays: `Welcome, Rahul! Have a nice day.`
+
+Case 2: User clicks Cancel
+
+1. Confirm box appears.
+2. User clicks Cancel.
+3. Alert appears: `You cancelled the interaction.`
+4. Webpage displays: `Interaction cancelled.`
+
+What to write in record:
+
+- Aim
+- Program
+- Output for OK condition
+- Output for Cancel condition
+- Result: Thus, dynamic pop-up-based interaction was implemented successfully using JavaScript.
+
+# Complete record preparation checklist
+
+Use this checklist for all eight experiments.
+
+Record checklist
+
+0/8 completed
+
+[ ]Experiment title and number
+
+[ ]Aim
+
+[ ]Software requirements (HTML, CSS, JavaScript, VS Code, browser)
+
+[ ]Theory / concept (2–3 lines)
+
+[ ]Algorithm or procedure
+
+[ ]Program code
+
+[ ]Expected output / screenshots
+
+[ ]Result
+
+## Quick revision – Important concepts for viva
+
+| Topic | Important JavaScript concept |
+| --- | --- |
+| Click events | `onclick` |
+| Interactive webpage | `onmouseover`, `onmouseout` |
+| Basic validation | `if`, `else`, `.value` |
+| Complete validation | Regular expressions, `.length`, `.test()` |
+| Objects | `{ }`, properties |
+| Methods | Functions inside objects, `this` |
+| Alert | `alert()` |
+| Prompt | `prompt()` |
+| Dynamic pop-ups | `confirm()`, `if-else` |
+
+## Important practical tips
+
+1. Save each experiment in a separate HTML file.
+2. Use the same filenames given above to avoid confusion.
+3. Take screenshots of both successful and unsuccessful outputs wherever applicable.
+4. For Level 2 experiments, demonstrate all the different conditions, not just the successful one.
+5. Be prepared to explain the main JavaScript function in each program.
+
+My suggestion: Complete Week 11 first (4 programs), then Week 12 (4 programs). These are small, independent programs, and you can run all eight without installing any additional software.

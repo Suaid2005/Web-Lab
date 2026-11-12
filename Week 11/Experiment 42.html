@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Interactive Webpage</title>
+</head>
+<body>
+<h2>Interactive Webpage</h2>
+<button onclick="changeText()">
+Click Here
+</button>
+<h3 id="message">Welcome!</h3>
+<p onmouseover="this.style.color='red'"
+onmouseout="this.style.color='black'">
+Move your mouse over this text.
+</p>
+<script>
+function changeText() {
+document.getElementById("message").innerHTML =
+"Hello! Welcome to JavaScript Events.";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dynamic Pop-up Interaction</title>
+</head>
+<body>
+<h2>Interactive Pop-up System</h2>
+<button onclick="start()">Start Interaction</button>
+<p id="result"></p>
+<script>
+function start() {
+let choice = confirm("Do you want to continue?");
+if (choice) {
+let name = prompt("Enter your name:");
+if (name == null || name.trim() == "") {
+alert("Name not entered!");
+document.getElementById("result").innerHTML =
+"Interaction cancelled.";
+}
+else {
+alert("Welcome " + name + "!");
+document.getElementById("result").innerHTML =
+"Welcome, " + name + "! Have a nice day.";
+}
+}
+else {
+alert("You cancelled the interaction.");
+document.getElementById("result").innerHTML =
+"Interaction cancelled.";
+}
+}
+</script>
+</body>
+</html>
